@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualização do Livro | G.E.L</title>
+
+  <!-- Fontes e ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css"> 
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="cabecalho-1">
+      <a href="../index.html" class="logo"><i class="fas fa-book"></i> G.E.L </a>
+
+      <form action="" class="search-form">
+        <input type="search" placeholder="Pesquise aqui..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-filter filter-btn"></i>
+      </form>
+
+      <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" class="fas fa-heart"></a>
+        <div id="login-btn" class="fas fa-user"></div>
+      </div>
+    </div>
+
+    <div class="cabecalho-2">
+            <nav class="navbar">
+                <a href="../index.html">Catálogo</a>
+                <a href="favoritos.html">Favoritos</a>
+                <a href="meuEmprestimos.html" class="ativo">Meus Empréstimos</a>
+                <a href="configuracoes.html">Configurações</a>
+            </nav>
+        </div>
+  </header>
+
+  <!-- Seção principal -->
+  <section class="visualizacao-livro">
+    <div class="livro-container">
+      <div class="livro-imagem">
+  <img src="../imagens/alquimista-livro.jpg" alt="Capa do Livro">
+  <button class="btn-favorito" title="Adicionar aos favoritos">
+    <i class="far fa-heart"></i>
+  </button>
+</div>
+
+
+      <div class="livro-detalhes">
+        <h1 class="titulo-livro">O Alquimista</h1>
+        <p class="autor-livro">por <strong>Paulo Coelho</strong></p>
+        <p class="genero-livro"><strong>Gênero:</strong> Ficção, Aventura, Autoajuda</p>
+        <p class="tags-livro"><strong>Tags:</strong> #inspiração #sonhos #viagem</p>
+          <div class="estrelas" aria-label="4 de 5 estrelas">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p class="resumo-avaliacoes">4.0 (128 avaliações)</p>
+        <p class="resumo-livro">
+          <strong>Resumo:</strong> 
+          Um jovem pastor andaluz embarca em uma jornada para encontrar um tesouro escondido nas pirâmides do Egito. No caminho, ele descobre o verdadeiro significado da vida e dos sonhos.
+        </p>
+
+        <div class="acoes-reserva">
+          <button class="btn reservar"><i class="fas fa-ticket"></i> Reservar (voucher 24h)</button>
+          <button class="btn secundario fila"><i class="fas fa-hourglass-half"></i> Entrar na fila</button>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de avaliações -->
+  <section class="avaliacoes">
+    <h2>Avaliações dos Leitores</h2>
+
+    <div class="avaliacao">
+      <div class="avaliacao-topo">
+        <i class="fas fa-user-circle"></i>
+        <h3>Maria Clara</h3>
+        <div class="estrelas">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <p class="comentario">Um livro incrível que me fez refletir muito sobre meus objetivos e sonhos!</p>
+    </div>
+
+    <div class="avaliacao">
+      <div class="avaliacao-topo">
+        <i class="fas fa-user-circle"></i>
+        <h3>João Pedro</h3>
+        <div class="estrelas">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <p class="comentario">Gostei bastante, leitura leve e inspiradora. Recomendo!</p>
+    </div>
+  </section>
+
+  <script src="../script.js"></script>
+</body>
+</html>

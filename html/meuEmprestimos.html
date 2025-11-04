@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Empréstimos | G.E.L</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-1">
+            <a href="../index.html" class="logo"><i class="fas fa-book"></i> G.E.L</a>
+            <form action="" class="search-form">
+                <input type="search" placeholder="Pesquise aqui..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+                <i class="fas fa-filter filter-btn"></i>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="meuEmprestimos.html"><i class="fas fa-book-open"></i></a>
+                <a href="favoritos.html"><i class="fas fa-heart"></i></a>
+                <a href="configuracoes.html"><i id="login-btn" class="fas fa-user"></i></a>
+            </div>
+        </div>
+
+        <div class="cabecalho-2">
+            <nav class="navbar">
+                <a href="../index.html">Catálogo</a>
+                <a href="favoritos.html">Favoritos</a>
+                <a href="meuEmprestimos.html" class="ativo">Meus Empréstimos</a>
+                <a href="configuracoes.html">Configurações</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="meus-emprestimos">
+        <h1>Meus Empréstimos</h1>
+        <div class="livros-favoritos">
+            <!-- Empréstimo 1 -->
+            <div class="livro">
+                <div class="livro-imagem">
+                    <img src="../imagens/alquimista-livro.jpg" alt="O Alquimista">
+                </div>
+                <div class="livro-detalhes">
+                    <h2>O Alquimista</h2>
+                    <p class="autor-livro">por <strong>Paulo Coelho</strong></p>
+                    <p class="dias-restantes"><strong>Faltam:</strong> 5 dias</p>
+                    <div class="acoes-favorito">
+                        <button class="btn renovar"><i class="fas fa-sync-alt"></i> Renovar</button>
+                        <button class="btn secundario devolver"><i class="fas fa-undo-alt"></i> Devolver</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empréstimo 2 -->
+            <div class="livro">
+                <div class="livro-imagem">
+                    <img src="../imagens/harrypoter.jpg" alt="Harry Potter">
+                </div>
+                <div class="livro-detalhes">
+                    <h2>Harry Potter</h2>
+                    <p class="autor-livro">por <strong>J.K. Rowling</strong></p>
+                    <p class="dias-restantes"><strong>Faltam:</strong> 2 dias</p>
+                    <div class="acoes-favorito">
+                        <button class="btn renovar"><i class="fas fa-sync-alt"></i> Renovar</button>
+                        <button class="btn secundario devolver"><i class="fas fa-undo-alt"></i> Devolver</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empréstimo 3 -->
+            <div class="livro">
+                <div class="livro-imagem">
+                    <img src="../imagens/java.jpg" alt="Livro Java">
+                </div>
+                <div class="livro-detalhes">
+                    <h2>Livro Java</h2>
+                    <p class="autor-livro">por <strong>Desconhecido</strong></p>
+                    <p class="dias-restantes"><strong>Faltam:</strong> 7 dias</p>
+                    <div class="acoes-favorito">
+                        <button class="btn renovar"><i class="fas fa-sync-alt"></i> Renovar</button>
+                        <button class="btn secundario devolver"><i class="fas fa-undo-alt"></i> Devolver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

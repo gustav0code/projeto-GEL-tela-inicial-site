@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --green: #27ae60; 
+  --dark-color: #7f00ff;
+  --black: #444;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0,0,0,.1);
+  --border-hover: 0.1rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+  --purple:#A020F0;
+}
+
+*{
+  font-family: 'Poppins' , sans-serif;
+  margin: 0;padding: 0;
+  box-sizing:border-box;
+  outline:none; border:none;
+  text-decoration:none;
+  text-transform: capitalize;
+  transition:all .2s linear;
+  transition:width none;
+}
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:var(--black);
+
+}
+
+section{
+  padding: 5rem 9%;
+}
+
+.cabecalho .cabecalho-1{
+  background: #fff;
+  padding: 1.5rem 9%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho .cabecalho-1 .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color:var(--black);
+}
+
+.cabecalho .cabecalho-1 .logo i{
+  color:var(--purple);
+}
+
+.cabecalho .cabecalho-1 .search-form{
+  width: 50rem;
+  height: 5rem;
+  border:var(--border);
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: .5rem;
+}
+
+
+.cabecalho .cabecalho-1 .search-form input{
+  font-size: 1.6rem;
+  padding:0 1.2rem;
+  height: 100%;
+  width:100%;
+  text-transform: none;
+  color:var(--black);
+}
+
+.cabecalho .cabecalho-1 .search-form label{
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.cabecalho .cabecalho-1 .search-form label:hover{
+    color: var(--purple);
+}
+
+.cabecalho .cabecalho-1 .icons div,
+.cabecalho .cabecalho-1 .icons a{
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.cabecalho .cabecalho-1 .icons div:hover,
+.cabecalho .cabecalho-1 .icons a:hover{
+  color: var(--purple);
+}
+
+#search-btn{
+  display: none;
+}
+
+.cabecalho .cabecalho-2{
+  background:var(--purple);
+}
+
+.cabecalho .cabecalho-2 .navbar{
+  text-align: center;
+}
+
+.cabecalho .cabecalho-2 .navbar a{
+  color: #fff;
+  display:inline-block;
+  padding: 1.2rem;
+  font-size: 1.7rem;
+}
+
+.cabecalho .cabecalho-2 .navbar a:hover{
+  background: var(--dark-color);
+}
+
+.cabecalho .cabecalho-2.active{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  
+}
+
+.home .row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centraliza a row inteira na página */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.home .row .content {
+  display: flex;            /* torna a content um flex container */
+  align-items: center;      /* centraliza verticalmente dentro da content */
+  justify-content: space-between; /* texto à esquerda, imagem à direita */
+  flex: 1 1 42rem;
+}
+
+.home .row .content .menina-estudando {
+  width: 500px;
+  height: auto;
+  padding: 15px;
+}
+
+
+.home .row .books-slider{
+  flex-direction: 1 1 42rem;
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+  display: block;
+}
+
+
+.home .row .books-slider a img{
+  height: 25rem;
+}
+
+.home .row .books-slider a:hover img{
+  transform: scale(.9);
+}
+
+.home .row .books-slider .stand{
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.home .row .content h3{
+  color: var(--black);
+  font-size: 4.5rem;
+}
+
+.home .row .content p{
+  color: var(--light-color);
+  font-size: 1.4rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.btn {
+  width: 150px;
+  display: inline-block;
+  background-color: var(--purple); /* ou uma cor forte */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--dark-color);
+}
+
+
+.catalogo {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.catalogo h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.livraria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* espaço entre os livros */
+}
+
+.livro {
+    display: flex;
+    flex-direction: column; /* empilha imagem, título, descrição e botão */
+    align-items: center;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.livro:hover {
+    transform: scale(1.05); /* efeito leve ao passar o mouse */
+}
+
+.livro img {
+    width: 100%;
+    height: 250px; /* altura fixa para todos */
+    object-fit: cover; /* corta a imagem proporcionalmente */
+    margin-bottom: 10px;
+}
+
+.livro h4 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.livro p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries*/
+@media (max-width:991px){
+
+  html{
+  font-size: 55%;
+  }
+
+  .cabecalho .cabecalho-2{
+    padding: 2rem;
+  }
+
+  section{
+  padding: 3rem 2rem;
+  }
+
+
+}
+
+
+
+@media (max-width:768px){
+
+    .cabecalho .cabecalho-2{
+      display: none;
+    }
+
+    #search-btn{
+  display: inline-block;
+    }
+
+    .cabecalho .cabecalho-1{
+      box-shadow:var(--box-shadow);
+      position: relative;
+    }
+
+    .cabecalho .cabecalho-1 .search-form{
+      position:absolute;
+      top: -115%; right: 2rem;
+      width: 90%;
+      box-shadow: var(--box-shadow);
+    }
+
+    .cabecalho .cabecalho-1 .search-form.active{
+      top:115%;
+    }
+  
+}
+
+
+
+
+@media (max-width:450px){
+
+  html{
+  font-size: 50%;
+  }
+
+}
+
+
+/* inicio Css tela do lviro */
+.visualizacao-livro {
+  padding: 6rem 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.livro-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  max-width: 1000px;
+}
+
+.livro-imagem img {
+  width: 280px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.livro-detalhes {
+  flex: 1;
+}
+
+.livro-detalhes h1 {
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.livro-detalhes p {
+  font-size: 1.6rem;
+  color: var(--light-color);
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.livro-detalhes .btn {
+  margin-top: 1.5rem;
+}
+
+.avaliacoes {
+  padding: 4rem 9%;
+  background: #f9f9f9;
+}
+
+.avaliacoes h2 {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.avaliacao {
+  background: #fff;
+  border-radius: .8rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.avaliacao-topo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avaliacao-topo i {
+  font-size: 3rem;
+  color: var(--purple);
+}
+
+.avaliacao-topo h3 {
+  font-size: 1.8rem;
+  color: var(--black);
+  flex: 1;
+}
+
+.estrelas i {
+  color: gold;
+  font-size: 1.4rem;
+}
+
+.comentario {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  margin-top: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --green: #27ae60; 
+  --dark-color: #7f00ff;
+  --black: #444;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0,0,0,.1);
+  --border-hover: 0.1rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+  --purple:#A020F0;
+}
+
+*{
+  font-family: 'Poppins' , sans-serif;
+  margin: 0;padding: 0;
+  box-sizing:border-box;
+  outline:none; border:none;
+  text-decoration:none;
+  text-transform: capitalize;
+  transition:all .2s linear;
+  transition:width none;
+}
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:var(--black);
+
+}
+
+section{
+  padding: 5rem 9%;
+}
+
+.cabecalho .cabecalho-1{
+  background: #fff;
+  padding: 1.5rem 9%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho .cabecalho-1 .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color:var(--black);
+}
+
+.cabecalho .cabecalho-1 .logo i{
+  color:var(--purple);
+}
+
+.cabecalho .cabecalho-1 .search-form{
+  width: 50rem;
+  height: 5rem;
+  border:var(--border);
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: .5rem;
+}
+
+
+.cabecalho .cabecalho-1 .search-form input{
+  font-size: 1.6rem;
+  padding:0 1.2rem;
+  height: 100%;
+  width:100%;
+  text-transform: none;
+  color:var(--black);
+}
+
+.cabecalho .cabecalho-1 .search-form label{
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.cabecalho .cabecalho-1 .search-form label:hover{
+    color: var(--purple);
+}
+
+.cabecalho .cabecalho-1 .filter-btn{
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.cabecalho .cabecalho-1 .filter-btn:hover{
+    color: var(--purple);
+}
+
+
+.cabecalho .cabecalho-1 .icons div,
+.cabecalho .cabecalho-1 .icons a{
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.cabecalho .cabecalho-1 .icons div:hover,
+.cabecalho .cabecalho-1 .icons a:hover{
+  color: var(--purple);
+}
+
+#search-btn{
+  display: none;
+}
+
+.cabecalho .cabecalho-2{
+  background:var(--purple);
+}
+
+.cabecalho .cabecalho-2 .navbar{
+  text-align: center;
+}
+
+.cabecalho .cabecalho-2 .navbar a{
+  color: #fff;
+  display:inline-block;
+  padding: 1.2rem;
+  font-size: 1.7rem;
+}
+
+.cabecalho .cabecalho-2 .navbar a:hover{
+  background: var(--dark-color);
+}
+
+.cabecalho .cabecalho-2.active{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  
+}
+
+.home .row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centraliza a row inteira na página */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.home .row .content {
+  display: flex;            /* torna a content um flex container */
+  align-items: center;      /* centraliza verticalmente dentro da content */
+  justify-content: space-between; /* texto à esquerda, imagem à direita */
+  flex: 1 1 42rem;
+}
+
+.home .row .content .menina-estudando {
+  width: 500px;
+  height: auto;
+  padding: 15px;
+}
+
+
+.home .row .books-slider{
+  flex-direction: 1 1 42rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.home .row .books-slider a img{
+  height: 25rem;
+}
+
+.home .row .books-slider a:hover img{
+  transform: scale(.9);
+}
+
+.home .row .books-slider .stand{
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.home .row .content h3{
+  color: var(--black);
+  font-size: 4.5rem;
+}
+
+.home .row .content p{
+  color: var(--light-color);
+  font-size: 1.4rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.btn {
+  width: 150px;
+  display: inline-block;
+  background-color: var(--purple); /* ou uma cor forte */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--dark-color);
+}
+
+
+.catalogo {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.catalogo h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.livraria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* espaço entre os livros */
+}
+
+.livro {
+    display: flex;
+    flex-direction: column; /* empilha imagem, título, descrição e botão */
+    align-items: center;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.livro:hover {
+    transform: scale(1.05); /* efeito leve ao passar o mouse */
+}
+
+.livro img {
+    width: 100%;
+    height: 250px; /* altura fixa para todos */
+    object-fit: cover; /* corta a imagem proporcionalmente */
+    margin-bottom: 10px;
+}
+
+.livro h4 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.livro p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.acoes-reserva{ display:flex; gap:1rem; margin-top:1.6rem; }
+.avaliacoes .estrelas i{ color:#ffb400; font-size:1.6rem; }
+.resumo-avaliacoes{ font-size:1.3rem; color:var(--light-color); margin-top:.4rem; }
+
+/* fim Css tela do lviro */
+
+
+
+.livros-favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Perfil dropdown ajustado */
+.cabecalho .cabecalho-1 .icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+/* Botão de perfil */
+.perfil-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem; /* menor que antes */
+  color: var(--black);
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: var(--border);
+  background: #fff;
+}
+.perfil-btn:hover {
+  color: var(--purple);
+  border: var(--border-hover);
+}
+.perfil-btn .chevron {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Menu dropdown */
+.perfil-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  width: max-content;      /* ajusta automaticamente à largura do conteúdo */
+  min-width: 12rem;        /* garante um tamanho mínimo */
+  padding: 0.2rem 0;       /* padding vertical menor */
+  display: none;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* inicio perfil */
+.config-perfil {
+    padding: 40px 20px;
+}
+
+.config-perfil h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #222;
+}
+
+.form-group input {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.btn.salvar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.btn.salvar:hover {
+    background-color: #45a049;
+}
+
+/* fim perfil */
+
+.livro-detalhes .dias-restantes{
+  font-size: 1.5rem;
+}
+
+
+.livro-imagem {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-favorito {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.8rem;
+  color: var(--purple);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.btn-favorito:hover {
+  background: var(--purple);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* quando estiver ativo (clicado), o botão fica preenchido */
+.btn-favorito.ativo {
+  background: var(--purple);
+  color: white;
+}

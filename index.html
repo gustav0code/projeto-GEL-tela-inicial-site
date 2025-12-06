@@ -97,6 +97,86 @@
 
     <!--sessão home fim-->
 
+     <!-- Filtros acima do catálogo -->
+  <section class="filtros" aria-label="Filtros do catálogo">
+    <div class="filtros-container">
+      <!-- Filtro: Gênero -->
+      <div class="dropdown-filter" data-filter="genero">
+        <input type="checkbox" id="dd-genero" class="dd-toggle" hidden />
+        <label for="dd-genero" class="dd-btn" aria-haspopup="listbox" aria-expanded="false">
+          <i class="fas fa-tags"></i>
+          <span>Gênero</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </label>
+        <div class="dd-panel" role="listbox" aria-labelledby="dd-genero">
+          <input type="text" class="dropdown-search" placeholder="Pesquisar gênero..." aria-label="Pesquisar gênero" />
+          <ul class="dd-options">
+            <li><button type="button" data-value="Fantasia">Fantasia</button></li>
+            <li><button type="button" data-value="Ficção Científica">Ficção Científica</button></li>
+            <li><button type="button" data-value="Técnico">Técnico</button></li>
+            <li><button type="button" data-value="Biografia">Biografia</button></li>
+            <li><button type="button" data-value="Romance">Romance</button></li>
+            <li><button type="button" data-value="Suspense">Suspense</button></li>
+            <li><button type="button" data-value="Terror">Terror</button></li>
+            <li><button type="button" data-value="Aventura">Aventura</button></li>
+            <li><button type="button" data-value="Didático">Didático</button></li>
+            <li><button type="button" data-value="HQ/Mangá">HQ/Mangá</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Filtro: Autor -->
+      <div class="dropdown-filter" data-filter="autor">
+        <input type="checkbox" id="dd-autor" class="dd-toggle" hidden />
+        <label for="dd-autor" class="dd-btn" aria-haspopup="listbox" aria-expanded="false">
+          <i class="fas fa-user-pen"></i>
+          <span>Autor</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </label>
+        <div class="dd-panel" role="listbox" aria-labelledby="dd-autor">
+          <input type="text" class="dropdown-search" placeholder="Pesquisar autor..." aria-label="Pesquisar autor" />
+          <ul class="dd-options">
+            <li><button type="button" data-value="J.K. Rowling">J.K. Rowling</button></li>
+            <li><button type="button" data-value="George Orwell">George Orwell</button></li>
+            <li><button type="button" data-value="C.S. Lewis">C.S. Lewis</button></li>
+            <li><button type="button" data-value="J.R.R. Tolkien">J.R.R. Tolkien</button></li>
+            <li><button type="button" data-value="Machado de Assis">Machado de Assis</button></li>
+            <li><button type="button" data-value="Clarice Lispector">Clarice Lispector</button></li>
+            <li><button type="button" data-value="Stephen King">Stephen King</button></li>
+            <li><button type="button" data-value="Neil Gaiman">Neil Gaiman</button></li>
+            <li><button type="button" data-value="Agatha Christie">Agatha Christie</button></li>
+            <li><button type="button" data-value="Isaac Asimov">Isaac Asimov</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Filtro: Data de Lançamento -->
+      <div class="dropdown-filter" data-filter="data">
+        <input type="checkbox" id="dd-data" class="dd-toggle" hidden />
+        <label for="dd-data" class="dd-btn" aria-haspopup="listbox" aria-expanded="false">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Data de Lançamento</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </label>
+        <div class="dd-panel" role="listbox" aria-labelledby="dd-data">
+          <!--<input type="text" class="dropdown-search" placeholder="Pesquisar ano..." aria-label="Pesquisar data de lançamento" /> -->
+          <div class="year-picker" data-decade-start="">
+            <div class="yp-header">
+              <button class="yp-prev" type="button" aria-label="Década anterior"><i class="fas fa-chevron-left"></i></button>
+              <div class="yp-range" aria-live="polite">—</div>
+              <button class="yp-next" type="button" aria-label="Próxima década"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="yp-grid" role="grid" aria-label="Selecionar ano"></div>
+            <div class="yp-actions">
+              <input class="yp-input" type="number" inputmode="numeric" pattern="\d{4}" placeholder="AAAA" min="1500" max="2100" aria-label="Digite o ano"/>
+              <button type="button" class="btn yp-apply">Definir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!--Sessao dos livros começo-->
 
     <section class="catalogo">

@@ -85,3 +85,65 @@ favoritosBtns.forEach(btn => {
         }
     });
 });
+
+
+// --- SELEÇÃO DE GÊNERO / AUTOR ---
+document.querySelectorAll('.dropdown-filter').forEach(drop => {
+    const btn = drop.querySelector('.dd-btn span');
+    const toggle = drop.querySelector('.dd-toggle');
+
+    drop.querySelectorAll('.dd-options button').forEach(item => {
+        item.addEventListener('click', () => {
+            btn.textContent = item.dataset.value;   // muda o texto do botão
+            toggle.checked = false;                // fecha o dropdown
+        });
+    });
+});
+
+
+// ----- YEAR PICKER -----
+document.querySelectorAll(".year-picker").forEach(picker => {
+    const grid = picker.querySelector(".yp-grid");
+    const range = picker.querySelector(".yp-range");
+
+    let decadeStart = 2000;
+
+    function renderDecade() {
+        range.textContent = `${decadeStart} - ${decadeStart + 9}`;
+        grid.innerHTML = "";
+
+        for (let year = decadeStart; year < decadeStart + 10; year++) {
+            const btn = document.createElement("button");
+            btn.textContent = year;
+            btn.addEventListener("click", () => {
+                picker.closest(".dropdown-filter")
+                      .querySelector(".dd-btn span").textContent = year;
+                picker.closest(".dropdown-filter")
+                      .querySelector(".dd-toggle").checked = false;
+            });
+            grid.appendChild(btn);
+        }
+    }
+
+    picker.querySelector(".yp-prev").onclick = () => {
+        decadeStart -= 10;
+        renderDecade();
+    };
+
+    picker.querySelector(".yp-next").onclick = () => {
+        decadeStart += 10;
+        renderDecade();
+    };
+
+    picker.querySelector(".yp-apply").onclick = () => {
+        const val = picker.querySelector(".yp-input").value;
+        if (val >= 1500 && val <= 2100) {
+            picker.closest(".dropdown-filter")
+                  .querySelector(".dd-btn span").textContent = val;
+            picker.closest(".dropdown-filter")
+                  .querySelector(".dd-toggle").checked = false;
+        }
+    };
+
+    renderDecade();
+});
